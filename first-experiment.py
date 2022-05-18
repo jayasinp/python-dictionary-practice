@@ -1,26 +1,22 @@
 from re import A
-
 #create a blank dictionary for user bio data
 bio_data = {"Name": "",
             "Age": "",
             "Gender": "",
             "Occupation": ""}
-
-#get inputs from the user
+#get inputs from the user 
+#add info to the dictionary directly instead of creating variables
 bio_data["Name"] = input("Enter your name: ")
-#bio_data["Name"] = Name
-Age = input("Enter your age: ")
-bio_data["Age"] = Age
+bio_data["Age"] = input("Enter your age: ")
 #set the gender and update the dictionary and the output phrase
-Gender = input("What is your gender: ")
-bio_data["Gender"] = Gender
+#without variables to look up, use the dictionary instead
+bio_data["Gender"] = input("What is your gender: ")
 gender_word = ""
-if Gender == "Male":
+if bio_data["Gender"] == "Male":
     gender_word = "he"
 else:
     gender_word = "her"
-Occupation = input("Enter your occupation: ")
-bio_data["Occupation"] = Occupation
+bio_data["Occupation"] = input("What is your occupation: ")
 #double check the dictionary
 print(bio_data)
 #print the user bio data phrase using f-string
